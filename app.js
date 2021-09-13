@@ -5,7 +5,6 @@ console.log(document.querySelector('.message').textContent);*/
 
 /*
 //071 What's the DOM and DOM Manipulation
-
 //DOM Methods and properties for DOM manipulation NOT PART OF JS
 // if the DOM is not a part of the javaScript language ,then how does this all work?
 //the DOM an the DOM methods are actually part of something called the web APIs.
@@ -14,13 +13,11 @@ console.log(document.querySelector('.message').textContent);*/
 //Web APIs are basically libraries that are also written in javaScript and that are ,automatically available for us to use.
 */
 /*
-
 //072 Selecting and Manipulating Elements
 // document.querySelector('.message').textContent = 'Correct Number! 🎉🎉';
 //
 // document.querySelector('.number').textContent = 13;
 // document.querySelector('.score').textContent = 25;
-
 //to get the actual value we need to use value property
 console.log(document.querySelector('.guess').value);
 document.querySelector('.guess').value = 15;

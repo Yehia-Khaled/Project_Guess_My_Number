@@ -1,11 +1,13 @@
 # **Project Guess My Number!**
 
 ## Used languages
+
 * HTML
 * CSS
 * JavaScript
-* BootStrab
+* Bootstrap
 
 ## Work on concept:
-* **DOM** 
-*  Events Fundamentals
+
+* **DOM**
+* Events Fundamentals
