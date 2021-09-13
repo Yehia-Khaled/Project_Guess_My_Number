@@ -30,6 +30,10 @@ document.querySelector('.guess').value = 15;
 document.querySelector('.check').addEventListener('click', function () {
     //first argument is the name of the event that we are listening for
     //second argument we have function value
-    console.log(document.querySelector('.guess').value)
-    document.querySelector('.message').textContent = 'Correct Number! 🎉🎉';
+    const guess=Number(document.querySelector('.guess').value)
+    console.log(guess,typeof guess)
+    // document.querySelector('.message').textContent = 'Correct Number! 🎉🎉';
+    if(!guess){
+    document.querySelector('.message').textContent = '⛔ No Number!';
+    }
 })
