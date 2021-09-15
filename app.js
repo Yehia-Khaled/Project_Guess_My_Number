@@ -23,6 +23,7 @@ console.log(document.querySelector('.guess').value);
 document.querySelector('.guess').value = 15;
 // console.log(document.querySelector('.guess').value); to see new value assigned
 */
+/*
 
 //073 Handling Click Events
 // Event: is Something that happens on the page.
@@ -36,4 +37,41 @@ document.querySelector('.check').addEventListener('click', function () {
     if(!guess){
     document.querySelector('.message').textContent = '⛔ No Number!';
     }
-})
+})*/
+
+//074 Implementing the Game Logic
+
+const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let score = 20;
+document.querySelector('.number').textContent = secretNumber;
+
+document.querySelector('.check').addEventListener('click', function () {
+  //first argument is the name of the event that we are listening for
+  //second argument we have function value
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess, typeof guess);
+  // document.querySelector('.message').textContent = 'Correct Number! 🎉🎉';
+  if (!guess) {
+    document.querySelector('.message').textContent = '⛔ No Number!';
+  } else if (guess === secretNumber) {
+    document.querySelector('.message').textContent = 'Correct Number! 🎉🎉';
+  } else if (guess > secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent = '📈 Too high!';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = '💥 You lost the game! ';
+      document.querySelector('.score').textContent = 0;
+    }
+  } else if (guess < secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent = '📉 Too low!';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = '💥 You lost the game! ';
+      document.querySelector('.score').textContent = 0;
+    }
+  }
+});
