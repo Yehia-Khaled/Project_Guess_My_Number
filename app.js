@@ -74,4 +74,5 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
+  console.log("hi there from github editor")
 });
